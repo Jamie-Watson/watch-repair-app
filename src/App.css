@@ -38,6 +38,10 @@
   color: var(--t-white) !important;
 }
 
+.accentText{
+  color: var(--t-l-red) !important;
+}
+
 .sidebarBreak{
   border-bottom: 1px solid var(--t-white);
 }
@@ -78,4 +82,21 @@
 
 .homeServices{
   background-color: var(--t-black);
+}
+
+.contact{
+  background-color: var(--t-black);
+  color: var(--t-white);
+}
+
+.socialButton{
+  border-color: var(--t-l-red) !important;
+  background-color: var(--t-black) !important;
+  color: var(--t-l-red) !important;
+}
+
+.socialButton :hover{
+  border-color: var(--t-l-red) !important;
+  background-color: var(--t-l-red) !important;
+  color: var(--t-white) !important;
 }

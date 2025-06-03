@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import HomeJumbotron from "./components/HomeJumbotron";
 import HomeCertifications from "./components/HomeCertifications";
 import HomeServices from "./components/HomeServices";
+import Contact from "./components/Contact";
 import "./App.css";
 
 import { useState, useEffect } from "react";
@@ -40,6 +41,8 @@ function MainContent({ sidebarOpen, setSidebarOpen }) {
             <HomeJumbotron />
             <HomeCertifications />
             <HomeServices />
+            <div className="my-5"></div>
+            <Contact />
             <div className="p-3 p-md-4">
               <h1>Sample</h1>
 

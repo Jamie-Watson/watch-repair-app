@@ -45,6 +45,13 @@ function HomeServices() {
               />
             </div>
           </div>
+          <div className="row g-4 text-center justify-content-center mt-3">
+            <div className="col-sm-4 text-center">
+              <p className="lead whiteText fw-bold" href="">
+                View All Services
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
