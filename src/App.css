@@ -67,3 +67,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.homeCertifications{
+  min-height: 30vh;
+  background-color: var(--t-white);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+
+.homeServices{
+  background-color: var(--t-black);
+}

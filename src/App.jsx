@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Sidebar from './components/Sidebar';
-import HomeJumbotron from './components/HomeJumbotron';
-import './App.css';
+import { Link } from "react-router-dom";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Sidebar from "./components/Sidebar";
+import HomeJumbotron from "./components/HomeJumbotron";
+import HomeCertifications from "./components/HomeCertifications";
+import HomeServices from "./components/HomeServices";
+import "./App.css";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function MainContent({ sidebarOpen, setSidebarOpen }) {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
@@ -13,40 +15,43 @@ function MainContent({ sidebarOpen, setSidebarOpen }) {
     const onResize = () => {
       const desktop = window.innerWidth >= 768;
       setIsDesktop(desktop);
-      
 
       if (desktop && !sidebarOpen) {
         setSidebarOpen(true);
       }
     };
-    
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, [sidebarOpen, setSidebarOpen]);
 
   return (
     <div
       className="main-content"
       style={{
-        marginLeft: isDesktop && sidebarOpen ? '280px' : '0',
-        minHeight: '100vh',
-        transition: 'margin-left 0.3s ease-in-out',
+        marginLeft: isDesktop && sidebarOpen ? "280px" : "0",
+        minHeight: "100vh",
+        transition: "margin-left 0.3s ease-in-out",
       }}
     >
       <div className="container-fluid p-0">
         <div className="row g-0 justify-content-center">
           <div className="col-12">
             <HomeJumbotron />
+            <HomeCertifications />
+            <HomeServices />
             <div className="p-3 p-md-4">
               <h1>Sample</h1>
-              
+
               <div className="mt-4">
                 <h2>Sample Content</h2>
                 {Array.from({ length: 20 }, (_, i) => (
                   <p key={i} className="mb-3">
-                    This is paragraph {i + 1}. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    This is paragraph {i + 1}. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
                   </p>
                 ))}
               </div>
@@ -63,14 +68,8 @@ function App() {
 
   return (
     <>
-      <Sidebar 
-        sidebarOpen={sidebarOpen} 
-        setSidebarOpen={setSidebarOpen} 
-      />
-      <MainContent 
-        sidebarOpen={sidebarOpen} 
-        setSidebarOpen={setSidebarOpen} 
-      />
+      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <MainContent sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
     </>
   );
 }
