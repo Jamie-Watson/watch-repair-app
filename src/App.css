@@ -76,6 +76,14 @@
   background-repeat: no-repeat;
 }
 
+.secondaryHomeJumbotron{
+  min-height: 45vh;
+  background-image: url(/assets/images/homeWatch2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .homeCertifications{
   min-height: 30vh;
   background-color: var(--t-white);
@@ -107,4 +115,8 @@
   border-color: var(--t-l-red) !important;
   background-color: var(--t-l-red) !important;
   color: var(--t-white) !important;
+}
+
+.reviewStars{
+  height: 48px !important;
 }

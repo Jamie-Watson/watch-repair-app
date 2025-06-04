@@ -26,7 +26,7 @@ function HomeWatches() {
             </div>
           </div>
           <div className="row g-4 justify-content-center">
-            <div className="col-sm-4 px-5">
+            <div className="col-lg-4 px-5">
               <WatchCard
                 watchTitle="Watch Name"
                 watchPrice="$999.99"
@@ -38,7 +38,7 @@ function HomeWatches() {
                 watchImg="https://picsum.photos/300/300"
               />
             </div>
-            <div className="col-sm-4 px-5">
+            <div className="col-lg-4 px-5">
               <WatchCard
                 watchTitle="Watch Name"
                 watchPrice="$999.99"
@@ -50,7 +50,7 @@ function HomeWatches() {
                 watchImg="https://picsum.photos/300/300"
               />
             </div>
-            <div className="col-sm-4 px-5">
+            <div className="col-lg-4 px-5 mb-5">
               <WatchCard
                 watchTitle="Watch Name"
                 watchPrice="$999.99"
@@ -61,13 +61,6 @@ function HomeWatches() {
                     ut aliquip ex ea commodo consequat."
                 watchImg="https://picsum.photos/300/300"
               />
-            </div>
-          </div>
-          <div className="row g-4 text-center justify-content-center mt-3">
-            <div className="col-sm-4 text-center">
-              <p className="lead whiteText fw-bold" href="">
-                View All Services
-              </p>
             </div>
           </div>
         </div>

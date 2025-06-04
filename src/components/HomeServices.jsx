@@ -11,7 +11,7 @@ function HomeServices() {
             </h1>
           </div>
           <div className="row g-4 justify-content-center">
-            <div className="col-sm-4 px-5">
+            <div className="col-lg-4 px-5">
               <ServiceCard
                 serviceTitle="Service Name"
                 serviceDes="Lorem ipsum dolor sit amet,
@@ -22,7 +22,7 @@ function HomeServices() {
                 serviceImg="https://picsum.photos/300/300"
               />
             </div>
-            <div className="col-sm-4 px-5">
+            <div className="col-lg-4 px-5">
               <ServiceCard
                 serviceTitle="Service Name"
                 serviceDes="Lorem ipsum dolor sit amet,
@@ -33,7 +33,7 @@ function HomeServices() {
                 serviceImg="https://picsum.photos/300/300"
               />
             </div>
-            <div className="col-sm-4 px-5">
+            <div className="col-lg-4 px-5">
               <ServiceCard
                 serviceTitle="Service Name"
                 serviceDes="Lorem ipsum dolor sit amet,
@@ -46,7 +46,7 @@ function HomeServices() {
             </div>
           </div>
           <div className="row g-4 text-center justify-content-center mt-3">
-            <div className="col-sm-4 text-center">
+            <div className="col-lg-4 text-center">
               <p className="lead whiteText fw-bold" href="">
                 View All Services
               </p>

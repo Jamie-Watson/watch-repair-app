@@ -23,14 +23,14 @@ function Contact() {
     <section className="container-fluid contact d-flex align-items-center">
       <div className="container">
         <div className="row g-4 justify-content-center text-center my-3">
-          <div className="col-12">
+          <div className="col-lg-12">
             <h1 className="display-4 fw-bold whiteText">Contact Us</h1>
           </div>
         </div>
 
-        <div className="row g-4 align-items-stretch mb-5">
-          <div className="col-12 col-md-4">
-            <div className="h-100 d-flex flex-column justify-content-center text-center text-md-start">
+        <div className="row g-4 align-items-stretch mb-5 justify-content-center">
+          <div className="col-12 col-lg-4">
+            <div className="h-100 d-flex flex-column justify-content-center text-center">
               <div className="mb-3">
                 <i className="bi bi-geo-alt-fill accentText fs-2 mb-2"></i>
               </div>
@@ -44,8 +44,8 @@ function Contact() {
               </address>
             </div>
           </div>
-          <div className="col-12 col-md-4">
-            <div className="h-100 d-flex flex-column justify-content-center text-center text-md-start">
+          <div className="col-12 col-lg-4">
+            <div className="h-100 d-flex flex-column justify-content-center text-center">
               <div className="mb-3">
                 <i className="bi bi-telephone-fill accentText fs-2 mb-2"></i>
               </div>
@@ -70,7 +70,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-lg-4">
             <div className="h-100 d-flex flex-column justify-content-center text-center">
               <div className="mb-3">
                 <i className="bi bi-share-fill accentText fs-2 mb-2"></i>

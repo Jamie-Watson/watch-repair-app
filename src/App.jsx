@@ -6,6 +6,7 @@ import HomeCertifications from "./components/HomeCertifications";
 import HomeServices from "./components/HomeServices";
 import HomeWatches from "./components/HomeWatches";
 import Contact from "./components/Contact";
+import SecondaryHomeJumbotron from "./components/SecondaryHomeJumbotron";
 import "./App.css";
 
 import { useState, useEffect } from "react";
@@ -42,6 +43,7 @@ function MainContent({ sidebarOpen, setSidebarOpen }) {
             <HomeJumbotron />
             <HomeCertifications />
             <HomeServices />
+            <SecondaryHomeJumbotron/>
             <HomeWatches />
             <Contact />
           </div>
