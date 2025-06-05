@@ -47,15 +47,13 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           left: sidebarOpen ? "0" : "-280px",
         }}
       >
-        
         <div className="p-3 sidebarBreak">
-            <div className="row justify-content-center">
+          <div className="row justify-content-center">
             <button className="btn btn-lg ms-auto">
-                <i className="bi bi-watch text-white" onClick={toggleSidebar}></i>
+              <i className="bi bi-watch text-white" onClick={toggleSidebar}></i>
             </button>
-            </div>
+          </div>
           <div className="position-relative d-flex align-items-center">
-           
             <Link
               to="/"
               className="position-absolute text-white text-decoration-none"
@@ -87,7 +85,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </li>
             <li className="nav-item mb-1">
               <Link
-                to="/dashboard"
+                to="/services"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText"
                 onClick={handleLinkClick}
               >
@@ -96,7 +94,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </li>
             <li className="nav-item mb-1">
               <Link
-                to="/orders"
+                to="/contact"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText"
                 onClick={handleLinkClick}
               >
@@ -105,7 +103,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </li>
             <li className="nav-item mb-1">
               <Link
-                to="/products"
+                to="/watch-care-tips"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText"
                 onClick={handleLinkClick}
               >
@@ -114,7 +112,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </li>
             <li className="nav-item mb-1">
               <Link
-                to="/customers"
+                to="/our-watches"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText" 
                 onClick={handleLinkClick}
               >
@@ -123,16 +121,15 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </li>
             <li className="nav-item mb-1">
               <Link
-                to="/customers"
+                to="/certifications"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText"
                 onClick={handleLinkClick}
               >
-                Cerifications
+                Certifications
               </Link>
             </li>
           </ul>
         </div>
-
       </div>
     </>
   );

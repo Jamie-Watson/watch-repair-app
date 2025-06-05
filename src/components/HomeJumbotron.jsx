@@ -1,4 +1,6 @@
-function HomeJumbotron(){
+import { Link } from 'react-router-dom';
+
+function HomeJumbotron({service}){
     return (
         <div 
         className="position-relative d-flex align-items-center justify-content-center whiteText homeJumbotron"
@@ -11,9 +13,11 @@ function HomeJumbotron(){
           <p className="lead" >
           Bringing your cherished timepieces back to life with unparalleled precision and care
           </p>
-          <h1 className="display-6 mb-3" href="">
-          Book Your Repair Now
+          <Link to="/services" className="text-decoration-none"> 
+          <h1 className="display-6 mb-3 whiteText" style={{ cursor: 'pointer' }}>           
+            Book Your Repair Now           
           </h1>
+        </Link>        
         </div>
       </div>
     );

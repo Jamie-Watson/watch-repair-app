@@ -1,66 +1,28 @@
-import { Link } from "react-router-dom";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import Sidebar from "./components/Sidebar";
-import HomeJumbotron from "./components/HomeJumbotron";
-import HomeCertifications from "./components/HomeCertifications";
-import HomeServices from "./components/HomeServices";
-import HomeWatches from "./components/HomeWatches";
-import Contact from "./components/Contact";
-import SecondaryHomeJumbotron from "./components/SecondaryHomeJumbotron";
+import { Routes, Route } from "react-router-dom"; // Remove BrowserRouter from here
+import { useState } from "react";
+import Main from "./components/Main";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import WatchCareTips from "./pages/WatchCareTips";
+import OurWatches from "./pages/OurWatches";
+import Certifications from "./pages/Certifications";
+import ServiceDetail from "./pages/ServiceDetail";
 import "./App.css";
-
-import { useState, useEffect } from "react";
-
-function MainContent({ sidebarOpen, setSidebarOpen }) {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
-
-  useEffect(() => {
-    const onResize = () => {
-      const desktop = window.innerWidth >= 768;
-      setIsDesktop(desktop);
-
-      if (desktop && !sidebarOpen) {
-        setSidebarOpen(true);
-      }
-    };
-
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [sidebarOpen, setSidebarOpen]);
-
-  return (
-    <div
-      className="main-content"
-      style={{
-        marginLeft: isDesktop && sidebarOpen ? "280px" : "0",
-        minHeight: "100vh",
-        transition: "margin-left 0.3s ease-in-out",
-      }}
-    >
-      <div className="container-fluid p-0">
-        <div className="row g-0 justify-content-center">
-          <div className="col-12">
-            <HomeJumbotron />
-            <HomeCertifications />
-            <HomeServices />
-            <SecondaryHomeJumbotron/>
-            <HomeWatches />
-            <Contact />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth >= 768);
 
   return (
-    <>
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <MainContent sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-    </>
+    <Main sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:servicePage" element={<ServiceDetail />} />
+        <Route path="/watch-care-tips" element={<WatchCareTips />} />
+        <Route path="/our-watches" element={<OurWatches />} />
+        <Route path="/certifications" element={<Certifications />} />
+      </Routes>
+    </Main>
   );
 }
 

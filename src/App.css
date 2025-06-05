@@ -111,7 +111,7 @@
   color: var(--t-l-red) !important;
 }
 
-.socialButton :hover{
+.socialButton:hover{
   border-color: var(--t-l-red) !important;
   background-color: var(--t-l-red) !important;
   color: var(--t-white) !important;
@@ -119,4 +119,26 @@
 
 .reviewStars{
   height: 48px !important;
+}
+
+.serviceDescription{
+  color: var(--t-black) !important;
+  background-color: var(--t-white) !important;
+}
+
+.backButton{
+  border-color: var(--t-d-red) !important;
+  background-color: var(--t-d-red) !important;
+  color: var(--t-white) !important;
+}
+
+.backButton:hover{
+  border-color: var(--t-black) !important;
+  background-color: var(--t-black) !important;
+  color: var(--t-white) !important;
+}
+
+.serviceBooking{
+  background-color: var(--t-gray) !important;
+  color: var(--t-white) !important;
 }
