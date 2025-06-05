@@ -20,31 +20,33 @@ function HomeServices() {
             </h1>
           </div>
           <div className="row g-4 justify-content-center">
-        
-            {servicesData.map((service) => (
-            service.id <4 ? <div key={service.id} className="col-lg-4 p-4 d-flex">
-              <div 
-                onClick={() => handleServiceClick(service.page)}
-                style={{ cursor: 'pointer' }}
-              >
-                <ServiceCard
-                  serviceTitle={service.title}
-                  serviceDes={service.shortDescription}
-                  serviceImg={service.image}
-                />
-              </div>
-            </div> : <></>
-          ))}
+            {servicesData.map((service) =>
+              service.id < 4 ? (
+                <div key={service.id} className="col-lg-4 p-4 d-flex">
+                  <div
+                    onClick={() => handleServiceClick(service.page)}
+                    style={{ cursor: "pointer", width: "100%" }}
+                    className="d-flex"
+                  >
+                    <ServiceCard
+                      serviceTitle={service.title}
+                      serviceDes={service.shortDescription}
+                      serviceImg={service.image}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <></>
+              )
+            )}
           </div>
           <div className="row g-4 text-center justify-content-center mt-3">
             <div className="col-lg-4 text-center">
-              <Link to="/services" className="text-decoration-none"> 
-          
-         
-              <p className="lead whiteText fw-bold" href="">
-                View All Services
-              </p>
-              </Link>       
+              <Link to="/services" className="text-decoration-none">
+                <p className="lead whiteText fw-bold" href="">
+                  View All Services
+                </p>
+              </Link>
             </div>
           </div>
         </div>

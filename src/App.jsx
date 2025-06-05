@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"; // Remove BrowserRouter from here
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Main from "./components/Main";
 import Home from "./pages/Home";

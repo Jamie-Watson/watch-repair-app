@@ -1,7 +1,7 @@
 function WatchCard({ watchDes, watchTitle, watchImg, watchPrice }) {
   return (
     <>
-      <div className="card serviceCard">
+      <div className="card">
         <div className="px-3 pt-3">
           <img src={watchImg} alt="" className="card-img" />
         </div>

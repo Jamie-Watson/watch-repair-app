@@ -142,3 +142,181 @@
   background-color: var(--t-gray) !important;
   color: var(--t-white) !important;
 }
+
+.homeServices .row > [class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.homeServices .row > [class*="col-"] > div {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px) !important;
+  border-color: var(--t-gray) !important;
+  background-color: var(--t-gray);
+  color: var(--t-white);
+}
+
+.careTipsButton{
+  background-color: var(--t-black) !important;
+  color: var(--t-white) !important;
+}
+
+.careTipsButton:focus {
+  box-shadow: 0 0 0 0.25rem var(--t-d-red) !important;
+}
+
+.careTips{
+  background-color: var(--t-white);
+  color: var(--t-black);
+}
+
+.careTipsButton::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f5efed'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.careTipsButton:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f5efed'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.cardImage{
+  width: 100% !important;
+  height: 400px !important;
+  object-fit: cover !important;
+  aspect-ratio: 1/1 !important;
+}
+
+.largeContainer{
+  min-height: 75vh !important;
+}
+/* ServiceDetail.css */
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.popup-content {
+  background-color: var(--t-white);
+  color: var(--t-black);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.popup-header {
+  padding: 1.5rem 1.5rem 0;
+  border-bottom: 1px solid var(--grey);
+}
+
+.popup-header h4 {
+  margin: 0;
+  color: var(--t-d-red);
+}
+
+.popup-body {
+  padding: 1.5rem;
+}
+
+.popup-footer {
+  padding: 0 1.5rem 1.5rem;
+  text-align: center;
+}
+
+/* Submit button styling */
+.submit-btn {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn.submitting,
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Schedule summary styling */
+.schedule-summary {
+  background-color: var(--t-white);
+  border-left: 4px solid var(--t-d-red);
+}
+
+/* Form focus states */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--t-d-red);
+  box-shadow: 0 0 0 0.2rem rgba(112, 38, 50, 0.25);
+}
+
+/* Required field indicator */
+.form-label {
+  font-weight: 500;
+}
+
+/* Tab buttons */
+.btn-group .btn {
+  transition: all 0.2s ease;
+}
+
+.btn-group .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Card hover effect */
+.card {
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input validation styles */
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+.form-control:valid {
+  border-color: var(--t-d-red);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+  
+  .schedule-summary {
+    font-size: 0.9rem;
+  }
+  
+  .popup-content {
+    margin: 1rem;
+  }
+}
