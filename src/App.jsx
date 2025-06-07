@@ -7,6 +7,8 @@ import WatchCareTips from "./pages/WatchCareTips";
 import OurWatches from "./pages/OurWatches";
 import Certifications from "./pages/Certifications";
 import ServiceDetail from "./pages/ServiceDetail";
+import CertificationDetails from "./pages/CertificationDetails";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <Main sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
@@ -21,6 +24,10 @@ function App() {
         <Route path="/watch-care-tips" element={<WatchCareTips />} />
         <Route path="/our-watches" element={<OurWatches />} />
         <Route path="/certifications" element={<Certifications />} />
+        <Route
+          path="/certifications/:page"
+          element={<CertificationDetails />}
+        />
       </Routes>
     </Main>
   );

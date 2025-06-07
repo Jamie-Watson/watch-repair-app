@@ -8,12 +8,12 @@ import SecondaryHomeJumbotron from "../components/SecondaryHomeJumbotron";
 function Home() {
   return (
     <>
-      <HomeJumbotron />
+      <HomeJumbotron id="top" />
       <HomeCertifications />
       <HomeServices />
       <SecondaryHomeJumbotron />
       <HomeWatches />
-      <Contact />
+      <Contact id="contact" />
     </>
   );
 }

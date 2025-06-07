@@ -22,6 +22,21 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
     }
   };
 
+  const handleScrollToSection = (sectionId) => {
+    handleLinkClick();
+
+    setTimeout(() => {
+      if (sectionId === "top") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }, 100);
+  };
+
   return (
     <>
       {!sidebarOpen && (
@@ -61,7 +76,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             >
               <span className="fs-4 sidebarText">True Time Repair</span>
             </Link>
-            
+
             <button
               className="btn btn-outline-light btn-sm ms-auto"
               onClick={toggleSidebar}
@@ -78,7 +93,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
               <Link
                 to="/"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText"
-                onClick={handleLinkClick}
+                onClick={() => handleScrollToSection("top")}
               >
                 Home
               </Link>
@@ -94,9 +109,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </li>
             <li className="nav-item mb-1">
               <Link
-                to="/contact"
+                to="/"
                 className="nav-link text-white d-flex align-items-center py-2 sidebarText"
-                onClick={handleLinkClick}
+                onClick={() => handleScrollToSection("contact")}
               >
                 Contact
               </Link>
@@ -113,7 +128,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <li className="nav-item mb-1">
               <Link
                 to="/our-watches"
-                className="nav-link text-white d-flex align-items-center py-2 sidebarText" 
+                className="nav-link text-white d-flex align-items-center py-2 sidebarText"
                 onClick={handleLinkClick}
               >
                 Our Watches

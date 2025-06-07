@@ -1,5 +1,5 @@
 import WatchCard from "./WatchCard";
-
+import watchData from "../data/watchData";
 function HomeWatches() {
   return (
     <>
@@ -26,42 +26,20 @@ function HomeWatches() {
             </div>
           </div>
           <div className="row g-4 justify-content-center">
-            <div className="col-lg-4 px-5">
-              <WatchCard
-                watchTitle="Watch Name"
-                watchPrice="$999.99"
-                watchDes="Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat."
-                watchImg="https://picsum.photos/300/300"
-              />
-            </div>
-            <div className="col-lg-4 px-5">
-              <WatchCard
-                watchTitle="Watch Name"
-                watchPrice="$999.99"
-                watchDes="Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat."
-                watchImg="https://picsum.photos/300/300"
-              />
-            </div>
-            <div className="col-lg-4 px-5 mb-5">
-              <WatchCard
-                watchTitle="Watch Name"
-                watchPrice="$999.99"
-                watchDes="Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat."
-                watchImg="https://picsum.photos/300/300"
-              />
-            </div>
+            {watchData.map((watch, index) =>
+              index < 3 ? (
+                <div className="col-lg-4 px-5">
+                  <WatchCard
+                    watchTitle={watch.title}
+                    watchPrice={watch.price}
+                    watchDes={watch.description}
+                    watchImg={watch.image}
+                  />
+                </div>
+              ) : (
+                <></>
+              )
+            )}
           </div>
         </div>
       </div>

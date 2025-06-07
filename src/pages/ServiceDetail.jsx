@@ -231,7 +231,10 @@ function ServiceDetail() {
 
                 <div className="card">
                   <div className="card-body p-4">
-                    <div className="btn-group w-100 mb-4" role="group">
+                    <div
+                      className="btn-group tabButton w-100 mb-4"
+                      role="group"
+                    >
                       <button
                         type="button"
                         className={`btn ${

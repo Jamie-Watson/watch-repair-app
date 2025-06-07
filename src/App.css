@@ -2,6 +2,7 @@
   width: 100vw !important;
   margin: 0;
   padding: 0;
+  caret-color: transparent;
 }
 
 :root {
@@ -193,9 +194,23 @@
 .largeContainer{
   min-height: 75vh !important;
 }
-/* ServiceDetail.css */
 
-/* Popup styles */
+.certCard{
+  background-color: var(--t-white) !important;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.certImage{
+  width: 220px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+.noCaret{
+  caret-color: transparent;
+}
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -239,73 +254,26 @@
   text-align: center;
 }
 
-/* Submit button styling */
-.submit-btn {
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.submit-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.submit-btn:active:not(:disabled) {
-  transform: translateY(0);
-}
-
-.submit-btn.submitting,
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-/* Schedule summary styling */
 .schedule-summary {
   background-color: var(--t-white);
   border-left: 4px solid var(--t-d-red);
 }
 
-/* Form focus states */
 .form-control:focus,
 .form-select:focus {
   border-color: var(--t-d-red);
   box-shadow: 0 0 0 0.2rem rgba(112, 38, 50, 0.25);
 }
 
-/* Required field indicator */
-.form-label {
-  font-weight: 500;
-}
 
-/* Tab buttons */
-.btn-group .btn {
+.tapButton{
   transition: all 0.2s ease;
 }
 
-.btn-group .btn:hover {
+.tabButton:hover {
   transform: translateY(-1px);
 }
 
-/* Card hover effect */
-.card {
-  transition: box-shadow 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Input validation styles */
-.form-control:invalid {
-  border-color: #dc3545;
-}
-
-.form-control:valid {
-  border-color: var(--t-d-red);
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .submit-btn {
     font-size: 1.1rem;

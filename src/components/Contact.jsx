@@ -1,4 +1,4 @@
-function Contact() {
+function Contact({ id }) {
   const handleSocialClick = (platform) => {
     const urls = {
       instagram: "https://instagram.com/truetimerepair",
@@ -20,7 +20,10 @@ function Contact() {
   };
 
   return (
-    <section className="container-fluid contact d-flex align-items-center">
+    <section
+      className="container-fluid contact d-flex align-items-center"
+      id={id}
+    >
       <div className="container">
         <div className="row g-4 justify-content-center text-center my-3">
           <div className="col-lg-12">
